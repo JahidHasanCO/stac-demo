@@ -1,0 +1,173 @@
+{
+  "body": {
+    "padding": {
+      "left": 16.0,
+      "top": 16.0,
+      "right": 16.0,
+      "bottom": 16.0
+    },
+    "child": {
+      "mainAxisSize": "max",
+      "children": [
+        {
+          "children": [
+            {
+              "height": 48.0,
+              "type": "sizedBox"
+            },
+            {
+              "children": [
+                {
+                  "decoration": {
+                    "color": "primary",
+                    "borderRadius": {
+                      "topLeft": 20.0,
+                      "topRight": 20.0,
+                      "bottomLeft": 20.0,
+                      "bottomRight": 20.0
+                    }
+                  },
+                  "width": 80.0,
+                  "height": 80.0,
+                  "child": {
+                    "icon": "person",
+                    "iconType": "material",
+                    "size": 40.0,
+                    "color": "#FFFFFFFF",
+                    "type": "icon"
+                  },
+                  "type": "container"
+                },
+                {
+                  "height": 24.0,
+                  "type": "sizedBox"
+                },
+                {
+                  "data": "Welcome Back",
+                  "style": {
+                    "type": "custom",
+                    "fontSize": 24.0,
+                    "fontWeight": "bold"
+                  },
+                  "type": "text"
+                },
+                {
+                  "height": 8.0,
+                  "type": "sizedBox"
+                },
+                {
+                  "data": "Sign in to continue",
+                  "style": {
+                    "type": "custom",
+                    "color": "#FF9E9E9E",
+                    "fontSize": 16.0
+                  },
+                  "type": "text"
+                }
+              ],
+              "type": "column"
+            },
+            {
+              "height": 48.0,
+              "type": "sizedBox"
+            }
+          ],
+          "type": "column"
+        },
+        {
+          "autovalidateMode": "always",
+          "child": {
+            "crossAxisAlignment": "stretch",
+            "children": [
+              {
+                "decoration": {
+                  "labelText": "Username",
+                  "prefixIcon": {
+                    "icon": "person_outline",
+                    "iconType": "material",
+                    "type": "icon"
+                  }
+                },
+                "textInputAction": "next",
+                "onChanged": {
+                  "actionType": "customSetValue",
+                  "key": "form.username",
+                  "value": {
+                    "actionType": "getFormValue",
+                    "id": "username"
+                  }
+                },
+                "type": "textField"
+              },
+              {
+                "height": 16.0,
+                "type": "sizedBox"
+              },
+              {
+                "decoration": {
+                  "labelText": "Password",
+                  "prefixIcon": {
+                    "icon": "lock_outline",
+                    "iconType": "material",
+                    "type": "icon"
+                  }
+                },
+                "textInputAction": "done",
+                "obscuringCharacter": "*",
+                "obscureText": true,
+                "maxLines": 1,
+                "onChanged": {
+                  "actionType": "customSetValue",
+                  "key": "form.password",
+                  "value": {
+                    "actionType": "getFormValue",
+                    "id": "password"
+                  }
+                },
+                "type": "textField"
+              },
+              {
+                "height": 32.0,
+                "type": "sizedBox"
+              },
+              {
+                "onPressed": {
+                  "actionType": "validateForm",
+                  "isValid": {
+                    "actionType": "http.post",
+                    "url": "auth/login",
+                    "payload": {
+                      "username": {
+                        "actionType": "getFormValue",
+                        "id": "form.username"
+                      },
+                      "password": {
+                        "actionType": "getFormValue",
+                        "id": "form.password"
+                      }
+                    },
+                    "successNavigate": "/home_screen"
+                  }
+                },
+                "child": {
+                  "data": "Sign In",
+                  "type": "text"
+                },
+                "type": "filledButton"
+              }
+            ],
+            "type": "column"
+          },
+          "type": "form"
+        },
+        {
+          "height": 32.0,
+          "type": "sizedBox"
+        }
+      ],
+      "type": "column"
+    },
+    "type": "singleChildScrollView"
+  },
+  "type": "scaffold"
+}
