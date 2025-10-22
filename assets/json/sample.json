@@ -1,0 +1,200 @@
+{
+  "type":  "scaffold",
+  "backgroundColor":  "#F4F6FA",
+  "appBar":  {
+    "type":  "appBar"
+  },
+  "body":  {
+    "type":  "form",
+    "child":  {
+      "type":  "padding",
+      "padding":  {
+        "left":  24,
+        "right":  24
+      },
+      "child":  {
+        "type":  "column",
+        "crossAxisAlignment":  "start",
+        "children":  [
+          {
+            "type":  "text",
+            "data":  "BettrDo Sign in",
+            "style":  {
+              "fontSize":  24,
+              "fontWeight":  "w900",
+              "height":  1.3
+            }
+          },
+          {
+            "type":  "sizedBox",
+            "height":  24
+          },
+          {
+            "type":  "textFormField",
+            "id":  "email",
+            "autovalidateMode":  "onUserInteraction",
+            "validatorRules":  [
+              {
+                "rule":  "isEmail",
+                "message":  "Please enter a valid email"
+              }
+            ],
+            "style":  {
+              "fontSize":  16,
+              "fontWeight":  "w400",
+              "height":  1.5
+            },
+            "decoration":  {
+              "hintText":  "Email",
+              "filled":  true,
+              "fillColor":  "#FFFFFF",
+              "border":  {
+                "type":  "outlineInputBorder",
+                "borderRadius":  8,
+                "color":  "#24151D29"
+              }
+            }
+          },
+          {
+            "type":  "sizedBox",
+            "height":  16
+          },
+          {
+            "type":  "textFormField",
+            "autovalidateMode":  "onUserInteraction",
+            "validatorRules":  [
+              {
+                "rule":  "isPassword",
+                "message":  "Please enter a valid password"
+              }
+            ],
+            "obscureText":  true,
+            "maxLines":  1,
+            "style":  {
+              "fontSize":  16,
+              "fontWeight":  "w400",
+              "height":  1.5
+            },
+            "decoration":  {
+              "hintText":  "Password",
+              "filled":  true,
+              "fillColor":  "#FFFFFF",
+              "border":  {
+                "type":  "outlineInputBorder",
+                "borderRadius":  8,
+                "color":  "#24151D29"
+              }
+            }
+          },
+          {
+            "type":  "sizedBox",
+            "height":  32
+          },
+          {
+            "type":  "filledButton",
+            "style":  {
+              "backgroundColor":  "#151D29",
+              "shape":  {
+                "borderRadius":  8
+              }
+            },
+            "onPressed":  {
+              "actionType":  "send_message",
+              "message": {
+                "actionType": "getFormValue",
+                "id": "email"
+              }
+            },
+            "child":  {
+              "type":  "padding",
+              "padding":  {
+                "top":  14,
+                "bottom":  14,
+                "left":  16,
+                "right":  16
+              },
+              "child":  {
+                "type":  "row",
+                "mainAxisAlignment":  "spaceBetween",
+                "children":  [
+                  {
+                    "type":  "text",
+                    "data":  "Proceed"
+                  },
+                  {
+                    "type":  "icon",
+                    "iconType":  "material",
+                    "icon":  "arrow_forward"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type":  "sizedBox",
+            "height":  16
+          },
+          {
+            "type": "switch",
+            "switchType": "cupertino",
+            "value": true,
+            "onChanged": {
+              "actionType":  "send_message",
+              "message": "event.value"
+            }
+          },
+          {
+            "type":  "align",
+            "alignment":  "center",
+            "child":  {
+              "type":  "textButton",
+              "onPressed":  {
+                "actionType":  "send_message",
+                "message": {
+                  "actionType": "getFormValue",
+                  "id": "email"
+                }
+              },
+              "child":  {
+                "type":  "text",
+                "data":  "Forgot password?",
+                "style":  {
+                  "fontSize":  15,
+                  "fontWeight":  "w500",
+                  "color":  "#4745B4"
+                }
+              }
+            }
+          },
+          {
+            "type":  "sizedBox",
+            "height":  8
+          },
+          {
+            "type":  "align",
+            "alignment":  "center",
+            "child":  {
+              "type":  "text",
+              "data":  "Don't have an account? ",
+              "style":  {
+                "fontSize":  15,
+                "fontWeight":  "w400",
+                "color":  "#000000"
+              },
+              "children":  [
+                {
+                  "data":  "Sign Up for BettrDo",
+                  "style":  {
+                    "fontSize":  15,
+                    "fontWeight":  "w500",
+                    "color":  "#4745B4"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "body": {
+    "child": {
+      "child": {
+        "id": "gender_group",
+        "groupValue": "male",
+        "child": {
+          "children": [
+            {
+              "radioType": "material",
+              "value": "male",
+              "groupId": "gender_group",
+              "onChanged": {
+                "action_type": "send_message",
+                "message": "male"
+              },
+              "type": "radio"
+            },
+            {
+              "radioType": "material",
+              "value": "female",
+              "groupId": "gender_group",
+              "onChanged": {
+                "action_type": "send_message",
+                "message": "female"
+              },
+              "type": "radio"
+            },
+            {
+              "onPressed": {
+                "action_type": "send_message",
+                "message": "Selected"
+              },
+              "child": {
+                "data": "Submit",
+                "type": "text"
+              },
+              "type": "elevatedButton"
+            }
+          ],
+          "type": "column"
+        },
+        "type": "radioGroup"
+      },
+      "type": "form"
+    },
+    "type": "center"
+  },
+  "type": "scaffold"
+}

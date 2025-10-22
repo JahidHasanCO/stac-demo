@@ -6,15 +6,13 @@ import 'package:stac_demo/shared/stac/action_parsers/navigate_action_parsers.dar
 import 'package:stac_demo/shared/stac/action_parsers/set_value_action_parser.dart';
 
 import 'default_stac_options.dart';
+import 'shared/stac/action_parsers/send_message_action_parser.dart';
 
 Future<void> main() async {
   await Stac.initialize(
     options: defaultStacOptions,
     actionParsers: [
-      HttpPostActionParser(),
-      NavigateActionParser(),
-      SetValueActionParser(),
-      SetValueActionParser(),
+      SendMessageActionParser(),
     ],
   );
   runApp(const ProviderScope(child: MyApp()));
@@ -31,7 +29,7 @@ class MyApp extends ConsumerWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // show the login_screen as defined in stac/generated screens
-      home: Stac.fromAssets('assets/json/login_screen.json'),
+      home: Stac.fromAssets('assets/json/sample.json'),
     );
   }
 }
