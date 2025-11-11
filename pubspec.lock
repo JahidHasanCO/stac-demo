@@ -66,13 +66,13 @@ packages:
     source: hosted
     version: "4.1.0"
   build_runner:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: build_runner
-      sha256: "8cd45bdd6217138f4cfbaf6286c93f270ae4b3e2e281e69c904bd00cdf8aa626"
+      sha256: a9461b8e586bf018dd4afd2e13b49b08c6a844a4b226c8d1d10f3a723cdd78c3
       url: "https://pub.dev"
     source: hosted
-    version: "2.10.0"
+    version: "2.10.1"
   built_collection:
     dependency: transitive
     description:
@@ -348,7 +348,7 @@ packages:
     source: hosted
     version: "4.9.0"
   json_serializable:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: json_serializable
       sha256: "33a040668b31b320aafa4822b7b1e177e163fc3c1e835c6750319d4ab23aa6fe"
@@ -676,18 +676,18 @@ packages:
     dependency: "direct main"
     description:
       name: stac
-      sha256: b36af504df414cacc53a04f1e0be1d8f536f220f87f9c75ef65cbc339308eb20
+      sha256: e3fb6252ba8cbdce4970080b2198ca53237ebe8d1307ac141e7952b199edfc0f
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.1"
+    version: "1.1.0"
   stac_core:
     dependency: "direct main"
     description:
       name: stac_core
-      sha256: "1c8d0cc42566b75d7584eb926eb8caaf7aaac5f4e056e5aae3e68d651105a537"
+      sha256: "167660082c9bc9c579c2151bfdbcdffae64b12d3e2977d45eccc6821ece39811"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.0"
+    version: "1.1.0"
   stac_framework:
     dependency: "direct main"
     description:
